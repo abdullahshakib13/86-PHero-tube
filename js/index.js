@@ -23,8 +23,7 @@ const handleLoadVideo = async (categoryId) => {
 
     // const noContent = document.getElementById('no-content');
     if (data.data.length === 0) {
-        // noContent.classList.remove('hidden');
-        cardContainer.innerHTML = "<div class=' w-full h-14 items-center justify-center'> <img class=' w-full h-14 items-center justify-center' src='images/icon.png' /> <p class='text-center'>Oops!! Sorry, There is no content here</p> </div > ";
+        cardContainer.innerHTML = "<div class=' w-full w-screen h-14  items-center justify-center'> <img class='w-80 mx-auto' src='images/icon.png' /> <p class='text-center mt-4 text-3xl font-bold'>Oops!! Sorry, There is no content here</p> </div > ";
     }
     else {
         // noContent.classList.add('hidden');
@@ -64,35 +63,7 @@ function timeElement(second) {
     const mints = Math.floor((sec % 3600) / 60);
     const value = `${hour}hrs ${mints} min ago`;
     return `<div>${value}</div>`;
-}
-   
-    
-// const cardContainer = document.getElementById('card-container');
-// document.getElementById('sort-view').addEventListener('click', () => {
-//     const sortByView = async (categoryId) => {
-//         const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/1000`)
-//         const data = await response.json();
-//         console.log(data);
-//     }
-// }
-    
-// }
-
-
-/*
-const sortBtn = document.getElementById('sort-btn');
-const sortByView = async (categoryId) => {
-    const response = await fetch(`https://openapi.programming-hero.com/api/videos/category/1000`)
-    const data = await response.json();
-    const viewsData = data.data[0].others;
-    console.log(viewsData);
-    // customSort = (a,b) => {
-        
-    }; 
-    
-    */
-            
-    // }
+};
  
 
 handleCategory();
